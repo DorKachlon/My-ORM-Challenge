@@ -170,10 +170,10 @@ class MySequelize {
                 //Creating an array containing trios of [key,value,operator]
                 let keyValuesOp = opUsed.map((op) =>
                     typeof op === "symbol"
-                        ? [
+                        ? flatten([
                               Object.entries(options.where[op]),
                               Symbol.keyFor(op),
-                          ].flat(2)
+                          ])
                         : [op, options.where[op], "="]
                 );
                 //Converting the array into sql clause: for[id,5,>]->id>5
@@ -280,5 +280,11 @@ class MySequelize {
        */
     }
 }
-
+function flatten(arr) {
+    return arr.reduce(function (flat, toFlatten) {
+        return flat.concat(
+            Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten
+        );
+    }, []);
+}
 module.exports = { MySequelize };
