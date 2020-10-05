@@ -1,0 +1,24 @@
+{
+  "name": "challenge-sequlize-template",
+  "version": "1.0.0",
+  "description": "In this challenge we will be building basic ORM functionallity base on Sequelize usin mysql2",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoyShnitzel/challenge-sequlize-template.git"
+  },
+  "keywords": [],
+  "author": "Gal Moshkovitz <gal.moshko@gmail.com> (https://github.com/MrMoshkovitz)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoyShnitzel/challenge-sequlize-template/issues"
+  },
+  "homepage": "https://github.com/RoyShnitzel/challenge-sequlize-template#readme",
+  "dependencies": {
+    "jest": "^26.4.2",
+    "mysql2": "^2.2.5"
+  }
+}
